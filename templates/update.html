@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <form class="row gy-2 gx-3 align-items-center" action="/update/{{diary.sno}}" method="POST">
+        <div class="mb-3" display="block" margin="0 auto">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Title" value="{{diary.title}}">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <div class="input-group">
+                <textarea class="form-control"  rows="3" name="desc" id="desc" type="text">{{diary.desc}}</textarea>
+            </div>
+            
+            <br>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

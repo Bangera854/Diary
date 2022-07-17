@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+
+
+<br>
+<br>
+<div class="container">
+    <form class="row gy-2 gx-3 align-items-center" action="/" method="POST">
+        <div class="mb-3" display="block" margin="0 auto">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control"  rows="3" name="desc" id="desc"></textarea>
+            <br>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</html>
+
+{% endblock body %}
